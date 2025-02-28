@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, url_for
 
 app = Flask(__name__)
 
@@ -28,7 +28,7 @@ def image():
                   </head>
                   <body>
                     <h1>Жди нас, Марс!</h1>
-                    <img src="/static/img/mars.jpg" alt="Фото планеты Марс">
+                    <img src="{url_for('static', filename='img/mars.jpg')}" alt="Фото планеты Марс">
                     <p>Вот она какая, красная планета.</p>
                   </body>
                 </html>"""
