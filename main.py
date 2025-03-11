@@ -11,5 +11,9 @@ def mars(word):
 def training(prof):
     return render_template('training.html', spec=prof)
 
+@app.route('/list_prof/<lk>')
+def list_prof(lk):
+    return render_template('list.html', param=lk)
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
